@@ -6,6 +6,17 @@
 <br>
 <br>
 
-{{ api }}
+{% if api %}
+    {% if api == "Error..." %}
+        There was a problem with you ticker symbol, Please try again...
+    {% else %}
+
+        {% for key, value in api.items %}
+            {{key}} : {{value}} <br>
+        {% endfor %}
+
+    {% endif %}
+
+{% endif %}
 
 {% endblock %}
