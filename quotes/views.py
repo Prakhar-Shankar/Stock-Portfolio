@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Stock
+from .forms import Stockform
+from django.contrib import messages
+
 
 #pk_1d29f40ff033462a8b4783bfae48aa78
 
@@ -29,6 +32,14 @@ def about(request):
     return render(request, 'about.html', {})
 
 def add_stock(request):
+    if request.method == 'POST':
+        form = Stockform(request.POST or None)
 
-    ticker = Stock.objects.all();
-    return render(request, 'add_stock.html', {"ticker": ticker})
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Stock has been added successfully")
+            return redirect('add_stock')
+        
+    else:
+        ticker = Stock.objects.all()
+        return render(request, 'add_stock.html', {"ticker": ticker})
