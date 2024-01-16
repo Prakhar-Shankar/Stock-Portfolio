@@ -2,17 +2,18 @@
 
 {% block content %}
 
-{% if ticker %}
-    {{ticker}}
-{% endif %}
 
-<h1>Hello motherfuckers the real coder is here</h1>
+
+<h1>Hello! This is a Stock Portfolio Platform</h1>
+<br>
+<p>If you want to search about any Stocks, please type in the symbol of that Stock in <strong>Get Stock Quote</strong></p>
+<p>You can <strong>Add Stocks</strong> and can see the details. Also you can <strong>Delete the Stocks</strong></p>
 <br>
 <br>
 
 {% if api %}
     {% if api == "Error..." %}
-        There was a problem with you ticker symbol, Please try again...
+       <p style="background-color: aquamarine; width: fit-content;">There was a problem with you ticker symbol, Please try again...</p> 
     {% else %}
 
         <h1>{{api.companyName}}</h1><br>
