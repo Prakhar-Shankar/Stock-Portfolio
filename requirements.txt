@@ -69,14 +69,13 @@ powerline-status==2.7
 protobuf==3.12.4
 psutil==5.9.0
 ptyprocess==0.7.0
-pycairo==1.20.1
+
 pycups==2.0.1
 
-pyelftools==0.27
 Pygments==2.11.2
 PyGObject==3.42.1
 
-pyinotify==0.9.6
+
 PyJWT==2.3.0
 pymacaroons==0.13.0
 PyNaCl==1.5.0
