@@ -35,7 +35,7 @@ fastrlock==0.8.2
 filelock==3.13.1
 greenlet==1.1.2
 
-gyp==0.1
+
 httplib2==0.20.2
 idna==3.3
 ifaddr==0.1.7
